@@ -1,31 +1,23 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "target": "es2020",
+    "module": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "declaration": true,
-    "declarationDir": "types",
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "esModuleInterop": true,
-    "outDir": "dist",
-    "lib": ["esnext", "dom"],
-    "typeRoots": ["node_modules/@types"],
-    "types": ["jest", "node"],
-    "baseUrl": ".",
-    "paths": {
-      "lib-name": ["src"]
-    },
-
+    // "emitDeclarationOnly": true,
+    "outDir": "./dist",
     "strict": true,
-    "strictNullChecks": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": true,
-    "noUnusedLocals": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-
+    "moduleResolution": "Node",
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": false,
+    "skipLibCheck": true
   },
-  "exclude": ["node_modules", "dist", "src/**/*.spec.ts"]
+  "include": ["src/**/*.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
